@@ -1,0 +1,99 @@
+/* ==========================================================
+   CleanHub – CSS bersama (dimuat oleh layouts/app.blade.php)
+   ========================================================== */
+:root {
+    --primary: #00bcd4;
+    --accent:  #4dd0e1;
+    --dark:    #006064;
+}
+
+body { background: #f4f6f9; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
+
+/* ---------- Navbar ---------- */
+.navbar-ch { background: linear-gradient(135deg, #006064, #00bcd4); box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.navbar-ch .navbar-brand span { color: #b2ebf2; }
+.navbar-ch .nav-link { color: rgba(255,255,255,.8); font-size: .92rem; border-radius: 50px; padding: .4rem .9rem; }
+.navbar-ch .nav-link:hover { color: #fff; background: rgba(255,255,255,.12); }
+.navbar-ch .nav-link.active { color: #fff; background: rgba(255,255,255,.22); font-weight: 600; }
+.notif-menu { width: 300px; max-height: 360px; overflow-y: auto; }
+
+/* ---------- Footer ---------- */
+.footer-ch { background: #0d1117; color: rgba(255,255,255,.5); }
+.footer-ch strong { color: rgba(255,255,255,.8); }
+
+/* ---------- Tombol ---------- */
+.btn-ch { background: var(--primary); color: #fff; border: none; border-radius: 50px; }
+.btn-ch:hover { background: var(--accent); color: #fff; }
+.btn-hero { background: #fff; color: var(--primary); border: none; border-radius: 50px; padding: 14px 36px; font-weight: 700; font-size: 1.05rem; transition: all .3s; }
+.btn-hero:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.2); color: var(--primary); }
+.btn-hero-outline { background: transparent; color: #fff; border: 2px solid #fff; border-radius: 50px; padding: 12px 34px; font-weight: 700; font-size: 1.05rem; transition: all .3s; }
+.btn-hero-outline:hover { background: #fff; color: var(--primary); transform: translateY(-3px); }
+.form-control:focus, .form-select:focus { border-color: var(--primary); box-shadow: 0 0 0 .2rem rgba(0,188,212,.25); }
+.nav-pills .nav-link { color: var(--primary); }
+.nav-pills .nav-link.active { background-color: var(--primary); color: #fff; }
+
+/* ---------- Badge status laporan & penugasan ---------- */
+.badge-diajukan     { background: #6c757d; }
+.badge-diverifikasi { background: #17a2b8; }
+.badge-diproses     { background: #ffc107; color: #000 !important; }
+.badge-ditangani    { background: #fd7e14; }
+.badge-selesai      { background: #28a745; }
+.badge-pending      { background: #fff3cd; color: #856404 !important; }
+.badge-diterima     { background: #cff4fc; color: #055160 !important; }
+
+/* ---------- Kartu ---------- */
+.stat-card { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.07); border-left: 4px solid var(--primary); height: 100%; }
+.stat-card .val { font-size: 1.8rem; font-weight: 800; line-height: 1.2; }
+.report-card { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 2px 6px rgba(0,0,0,.05); transition: transform .2s; }
+.report-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+.panel { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.06); overflow: hidden; }
+.panel-title { padding: 14px 20px; font-weight: 700; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; justify-content: space-between; }
+.panel .table { margin: 0; }
+.panel .table thead th { background: #f8f9fa; border: none; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: #6c757d; padding: 14px 16px; }
+.panel .table td { padding: 13px 16px; vertical-align: middle; border-color: #f0f0f0; }
+.card-header-ch { background: linear-gradient(135deg, #00bcd4, #4dd0e1); color: #fff; }
+.avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.avatar-lg { width: 50px; height: 50px; font-size: 1.2rem; }
+.icon-box { width: 44px; height: 44px; background: rgba(0,188,212,.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); }
+
+/* ---------- Beranda ---------- */
+.hero { background: linear-gradient(135deg, #006064 0%, #00bcd4 50%, #4dd0e1 100%); min-height: 88vh; display: flex; align-items: center; color: #fff; }
+.hero h1 { font-size: 3.2rem; font-weight: 900; }
+.hero .stat-card { text-align: center; padding: 24px; border: none; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,188,212,.15); color: #212529; }
+.hero .stat-card .val { font-size: 2.5rem; font-weight: 900; }
+.feature-icon { width: 64px; height: 64px; border-radius: 16px; background: rgba(0,188,212,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.feature-icon i { font-size: 28px; color: var(--primary); }
+.step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; }
+.monitor-card, .impact-card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,.05); }
+.status-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border-radius: 50px; font-size: .8rem; font-weight: 600; }
+.artikel-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06); transition: transform .2s; height: 100%; }
+.artikel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+.artikel-thumb { height: 140px; background: linear-gradient(135deg, #00bcd4, #4dd0e1); display: flex; align-items: center; justify-content: center; }
+.artikel-thumb i { font-size: 2.5rem; color: #fff; opacity: .8; }
+.artikel-cat { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--primary); }
+.kat-badge { background: rgba(0,188,212,.1); color: var(--primary); border-radius: 50px; padding: 3px 12px; font-size: .8rem; font-weight: 600; display: inline-block; }
+.cta { background: linear-gradient(135deg, #006064, #00bcd4); color: #fff; }
+
+/* ---------- Auth ---------- */
+.auth-card { border: none; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.1); overflow: hidden; }
+.auth-header { background: linear-gradient(135deg, var(--primary), var(--accent)); padding: 1.6rem; }
+.btn-primary-ch { background-color: var(--primary); border: none; border-radius: 50px; padding: 12px; font-weight: 600; color: #fff; }
+.btn-primary-ch:hover { background-color: var(--accent); color: #fff; }
+
+/* ---------- Peta & tracking ---------- */
+#peta { height: 450px; border-radius: 12px; }
+#detailMap { height: 220px; border-radius: 8px; }
+#tugasMap { height: 300px; border-radius: 12px; }
+.tracker-step { text-align: center; }
+.tracker-dot { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; color: #fff; }
+.tracker-line { flex: 1; height: 2px; min-width: 20px; }
+
+/* ---------- Tugas petugas ---------- */
+.wallet-card { background: linear-gradient(135deg, #00bcd4, #006064); border-radius: 12px; padding: 18px; color: #fff; height: 100%; }
+.wallet-card .amount { font-size: 1.6rem; font-weight: 800; }
+.tugas-item { padding: 14px 16px; border-bottom: 1px solid #f4f4f4; }
+.tugas-item:last-child { border-bottom: none; }
+.kat-pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 50px; font-size: .75rem; font-weight: 600; }
+
+@media (max-width: 991px) { .hero h1 { font-size: 2.4rem; } }
